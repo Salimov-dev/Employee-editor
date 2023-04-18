@@ -1,0 +1,16 @@
+.btn * + .btn {
+  margin-left: 8px;
+}
+
+.active-tr {
+  background-color: rgb(161, 182, 221);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+.education-table__container {
+  width: 100%;
+  min-height: 200px;
+}
