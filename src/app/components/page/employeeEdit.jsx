@@ -9,6 +9,8 @@ import { validator } from "../../utils/validator";
 // store
 import { getEmployeeById, updateEmployee } from "../../store/employees.store";
 import { getEducations } from "../../store/education.store";
+import Modal from "../common/form/modal";
+import EducationEditor from "../UI/educationEditor/educationEditor";
 
 const EmployeeEdit = () => {
   const { employeeId } = useParams();
@@ -110,24 +112,32 @@ const EmployeeEdit = () => {
   }, [data]);
 
   return (
-    <div className="container-fluid p-3 border rounded mt-3">
-      <div className="pb-3">
-        <h2>Редактировать сотрудника</h2>
-      </div>
-      <EmployeeForm
-        data={data}
-        onChange={handleChange}
-        errors={errors}
-        educations={educations !== null && educations}
-        isValid={isValid}
-        onClearEducation={handleClearEducation}
-        onSubmit={handleSubmit}
-        onPreviousPage={() => navigate(-1)}
-        btnEditText="Сохранить"
-        isEdit="true"
-        employeeId={employeeId}
+    <>
+      <Modal
+        componentId="educationEditor"
+        component={
+          <EducationEditor isModalBtn="true" modalTargetId="#educationEditor" />
+        }
       />
-    </div>
+      <div className="container-fluid p-3 border rounded mt-3">
+        <div className="pb-3">
+          <h2>Редактировать сотрудника</h2>
+        </div>
+        <EmployeeForm
+          data={data}
+          onChange={handleChange}
+          errors={errors}
+          educations={educations !== null && educations}
+          isValid={isValid}
+          onClearEducation={handleClearEducation}
+          onSubmit={handleSubmit}
+          onPreviousPage={() => navigate(-1)}
+          btnEditText="Сохранить"
+          isEdit="true"
+          employeeId={employeeId}
+        />
+      </div>
+    </>
   );
 };
 
