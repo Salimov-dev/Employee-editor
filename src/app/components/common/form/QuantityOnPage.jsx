@@ -1,7 +1,7 @@
 import React from "react";
-// import "./styles.css"
 
 const QuantityOnPage = ({ pageSize, setPageSize, label, name, options }) => {
+  
   const handleChange = ({ target }) => {
     setPageSize(Number(target.value));
     localStorage.setItem(name, JSON.stringify(Number(target.value)));

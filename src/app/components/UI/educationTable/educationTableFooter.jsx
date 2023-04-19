@@ -1,6 +1,7 @@
 import React from "react";
-import QuantityOnPage from "../../common/form/QuantityOnPage";
-import Pagination from "../../common/pagination/Pagination";
+import QuantityOnPage from "../../common/form/quantityOnPage";
+import Pagination from "../../common/pagination/pagination";
+import EducationQuantitySelectRow from "./educationQuantitySelectRow";
 
 const EducationTableFooter = ({
   selectedEducationIdByRow,
@@ -15,13 +16,15 @@ const EducationTableFooter = ({
 
   return (
     <div className="d-flex justify-content-between align-items-center border-top p-3">
-      <div>Выбрано: {selectedEducationIdByRow ? "1 строка" : "0 строк"}</div>
+      <EducationQuantitySelectRow
+        selectedEducationIdByRow={selectedEducationIdByRow}
+      />
       <div className="d-flex justify-content-between align-items-center ">
         <QuantityOnPage
           pageSize={pageSizePagination}
           setPageSize={setPageSizePagination}
           label="Строк на странице: "
-          name="QuantityObjectsOnPage"
+          name="QuantityEducationsOnPage"
           options={[5, 10, 15, 25]}
         />
         <div className="text-nowrap ps-3">

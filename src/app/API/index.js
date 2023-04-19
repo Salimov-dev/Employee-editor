@@ -1,6 +1,6 @@
-import QuantityObjectsOnPage from "./QuantityObjectsOnPage";
+import QuantityEducationsOnPage from "./QuantityEducationsOnPage";
 
 const API = {
-  QuantityObjectsOnPage,
+  QuantityEducationsOnPage,
 };
 export default API;

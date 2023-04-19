@@ -5,8 +5,8 @@ import _ from "lodash";
 import Table from "../../common/table/table";
 import EducationName from "./educationName";
 // utils
-import { paginate } from "../../../utils/paginate";
 import EducationTableFooter from "./educationTableFooter";
+import { paginate } from "../../../utils/paginate";
 
 const EducationTable = ({
   educations,
@@ -17,7 +17,7 @@ const EducationTable = ({
   const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSizePagination, setPageSizePagination] = useState(
-    localStorage.getItem("QuantityObjectsOnPage") || 5
+    localStorage.getItem("QuantityEducationsOnPage") || 5
   );
 
   const sortedEducation = _.orderBy(educations, [sortBy.path], [sortBy.order]);

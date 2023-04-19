@@ -1,9 +1,9 @@
 // libraries
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 // components
-import { loadEmployeesList } from "../../../store/employees.store";
 import { loadEducationsList } from "../../../store/education.store";
+import { loadEmployeesList } from "../../../store/employees.store";
 
 const AppLoader = ({ children }) => {
   const dispatch = useDispatch();

@@ -9,8 +9,8 @@ const Modal = ({ component, componentId }) => {
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div className="modal-dialog">
-        <div className="modal-content p-2">
+      <div className="modal-dialog modal-lg">
+        <div className="modal-content p-2 w-400">
           <div className="modal-body">{component}</div>
         </div>
       </div>

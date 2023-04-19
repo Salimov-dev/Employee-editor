@@ -18,7 +18,7 @@ const TableBody = ({ data, columns, onSelectedRow }) => {
       {data.map((item) => (
         <tr key={item._id} onClick={(e)=>onSelectedRow(e)} role="button">
           {Object.keys(columns).map((column) => (
-            <td key={column}>{renderContent(item, column)}</td>
+            <td  key={column}>{renderContent(item, column)}</td>
           ))}
         </tr>
       ))}
